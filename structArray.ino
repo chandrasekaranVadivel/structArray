@@ -25,7 +25,7 @@ void adcTask(void *prm)
 void printTask(void *prm)
 {
   char arr[20];
-  adc_t *adc_r=(adc_t*)malloc(sizeof(adc_t));
+  adc_t *adc_r;//=(adc_t*)malloc(sizeof(adc_t));
   while(1)
   {
     if(xQueueReceive(printQueue, adc_r, pdMS_TO_TICKS(10))==pdTRUE)
